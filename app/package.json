@@ -2,10 +2,23 @@
 	"name": "@server-demo/app",
 	"type": "module",
 	"packageManager": "yarn@4.6.0",
+	"scripts": {
+		"build": "node ./esbuild.config.js"
+	},
+	"nodemonConfig": {
+		"watch": "src",
+		"ignore": ["dist/**", "node_modules/**"],
+		"ext": "ts",
+		"exec": "rm -rf ./dist && yarn node ./esbuild.config.js && yarn node --loader=extensionless ./dist/index.js"
+	},
 	"devDependencies": {
 		"@types/node": "20",
 		"esbuild": "^0.25.0",
 		"glob": "^11.0.1",
+		"nodemon": "^3.1.9",
 		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"extensionless": "^1.9.9"
 	}
 }
