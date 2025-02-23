@@ -3,6 +3,7 @@
 	"type": "module",
 	"packageManager": "yarn@4.6.0",
 	"scripts": {
+		"dev": "nodemon",
 		"build": "node ./esbuild.config.js"
 	},
 	"nodemonConfig": {
