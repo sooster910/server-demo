@@ -23,9 +23,12 @@
 		"typescript": "^5.7.3"
 	},
 	"dependencies": {
+		"@fastify/autoload": "^6.1.0",
+		"@fastify/cors": "^11.0.0",
 		"dotenv": "^16.4.7",
 		"dotenv-safe": "^9.1.0",
 		"extensionless": "^1.9.9",
-		"fastify": "^5.2.1"
+		"fastify": "^5.2.1",
+		"fastify-plugin": "^5.0.1"
 	}
 }
