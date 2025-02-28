@@ -6,9 +6,9 @@ export default fp(
     await app.register(fastifyCors, {
       preflightContinue: true,
     });
-    console.log("내맘대로 존 ");
+    app.log.info("cors plugin init");
   },
   {
-    name: "cors",
+    name: "app.cors",
   }
 );
