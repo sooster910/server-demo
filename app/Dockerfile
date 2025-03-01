@@ -11,7 +11,7 @@ RUN yarn install --immutable
 
 # 소스코드 복사 및 빌드
 COPY app/ /usr/src/app/app/
-RUN yarn workspace server-demo build
+RUN yarn workspace @server-demo/app build
 
 # 환경변수 설정
 ENV NODE_ENV production
@@ -21,4 +21,4 @@ ENV PORT=10000
 EXPOSE 10000
 
 # 실행
-CMD ["yarn", "workspace", "server-demo", "start"]
+CMD ["yarn", "workspace", "@server-demo/app", "start"]
